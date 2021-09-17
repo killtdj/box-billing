@@ -38,6 +38,7 @@ RUN mkdir /var/www/html/app/bb-data/uploads
 
 # Copy existing application directory permissions
 RUN chown -R www-data:www-data \
+    /var/www/html/app/install \
     /var/www/html/app/bb-config.php \
     /var/www/html/app/bb-data/cache \
     /var/www/html/app/bb-data/log \
