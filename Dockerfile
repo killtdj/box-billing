@@ -31,8 +31,6 @@ RUN docker-php-ext-enable pdo_mysql
 # Copy existing application directory contents
 COPY app /var/www/html/app
 
-COPY script/database_migration.sh /opt/database_migration.sh
-
 # Copy existing application directory permissions
 RUN chown -R www-data:www-data \
     /var/www/html/app/bb-config.php \
