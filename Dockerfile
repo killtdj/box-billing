@@ -34,6 +34,8 @@ COPY app /var/www/html/app
 COPY app/bb-config-sample.php /var/www/html/app/bb-config.php
 COPY app/.env.example /var/www/html/app/.env
 
+RUN mkdir /var/www/html/app/bb-data/uploads
+
 # Copy existing application directory permissions
 RUN chown -R www-data:www-data \
     /var/www/html/app/bb-config.php \
