@@ -1,6 +1,6 @@
 FROM php:7.4-fpm-alpine
 
-WORKDIR /var/www/html/app
+WORKDIR /var/www/html
 
 RUN apk update && apk add --no-cache \
     build-base shadow curl \
@@ -29,20 +29,20 @@ RUN docker-php-ext-install pdo pdo_mysql
 RUN docker-php-ext-enable pdo_mysql
 
 # Copy existing application directory contents
-COPY app /var/www/html/app
+COPY app /var/www/html
 
-COPY app/bb-config-sample.php /var/www/html/app/bb-config.php
-COPY app/.env.example /var/www/html/app/.env
+COPY app/bb-config-sample.php /var/www/html/bb-config.php
+COPY app/.env.example /var/www/html/.env
 
-RUN mkdir /var/www/html/app/bb-data/uploads
+RUN mkdir /var/www/html/bb-data/uploads
 
 # Copy existing application directory permissions
 RUN chown -R www-data:www-data \
-    /var/www/html/app/install \
-    /var/www/html/app/bb-config.php \
-    /var/www/html/app/bb-data/cache \
-    /var/www/html/app/bb-data/log \
-    /var/www/html/app/bb-data/uploads
+    /var/www/html/install \
+    /var/www/html/bb-config.php \
+    /var/www/html/bb-data/cache \
+    /var/www/html/bb-data/log \
+    /var/www/html/bb-data/uploads
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
