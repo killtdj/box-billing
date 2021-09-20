@@ -4,7 +4,7 @@
 ## Prerequisites
 1.  Docker-CE (Community Edition)
 
-Install docker before run this setup. Go to [Docker]("https://www.docker.com/") to see how to install dan download Docker-CE.
+Install docker before run this setup. Go to [Docker](https://www.docker.com/) to see how to install dan download Docker-CE.
 
 ## Project Structure
 ```
@@ -17,7 +17,7 @@ Dockerfile
 ```
 
 ## Installation
-1.  Clone repo from [Github]("https://github.com/killtdj/box-billing.git")
+1.  Clone repo from [Github](https://github.com/killtdj/box-billing.git)
 ```sh
 git clone https://github.com/killtdj/box-billing.git
 ```
